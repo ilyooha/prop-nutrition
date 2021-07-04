@@ -5,7 +5,7 @@ import {Product} from "./model";
 export const questCookiesAndCream: Product = {
     id: '1',
     title: 'Cookies & cream',
-    whenCreated: new Date(),
+    whenCreated: new Date().toString(),
     brand: quest,
     categories: [proteinBar],
     servingSizeG: 60,

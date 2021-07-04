@@ -14,7 +14,7 @@ export interface Product {
     description?: string;
     brand: Brand;
     categories: Category[];
-    whenCreated: Date;
+    whenCreated: string;
     servingSizeG: number;
     nutritionPer100g?: NutritionFacts;
     nutritionPerServing: NutritionFacts;

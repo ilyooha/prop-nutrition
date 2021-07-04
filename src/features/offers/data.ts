@@ -1,6 +1,6 @@
 import {bars} from "../units/units";
 import {rub} from "../currencies/currencies";
-import {questCookiesAndCream} from "../products/products";
+import {questCookiesAndCream} from "../products/data";
 import {MonoPackageOffer, Offer} from "./model";
 import {monoPack, Pack} from "../packs/model";
 

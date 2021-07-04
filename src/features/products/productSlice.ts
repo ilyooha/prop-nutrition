@@ -73,7 +73,7 @@ export const getProductById = (id: string) => {
             categories: productState.categoryIds
                 .map(catId => getCategoryById(catId)(rootState)),
             brand: getBrandById(productState.brandId)(rootState),
-            whenCreated: new Date(productState.whenCreated),
+            whenCreated: productState.whenCreated,
             description: productState.description,
             servingSizeG: productState.servingSizeG,
             nutritionPerServing: productState.nutritionPerServing,

@@ -1,5 +1,5 @@
-import {CatalogItem} from "./catalogSlice";
-import * as source from './items';
+import * as source from './data';
+import {CatalogItem} from "./model";
 
 export function fetchItems(offset: number = 0, count: number = 20) {
     return new Promise<{ data: CatalogItem[] }>((resolve) =>

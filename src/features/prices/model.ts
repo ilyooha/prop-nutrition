@@ -1,4 +1,4 @@
-import {Currency} from "../currency/currencySlice";
+import {Currency} from "../currencies/model";
 
 export interface Price {
     value: number;

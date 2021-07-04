@@ -1,4 +1,4 @@
-import {Currency} from "./currencySlice";
+import {Currency} from "./model";
 
 export const rub: Currency = {
     code: 'RUB',

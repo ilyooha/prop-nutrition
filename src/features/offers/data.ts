@@ -1,5 +1,5 @@
 import {bars} from "../units/units";
-import {rub} from "../currencies/currencies";
+import {rub} from "../currencies/data";
 import {questCookiesAndCream} from "../products/data";
 import {MonoPackageOffer, Offer} from "./model";
 import {monoPack, Pack} from "../packs/model";
@@ -15,13 +15,13 @@ export const offers: Offer<Pack>[] = [
                 product: questCookiesAndCream,
                 quantity: {
                     value: 1,
-                    units: bars
+                    unitsCode: bars.code
                 }
             }
         },
         price: {
             value: 200,
-            currency: rub
+            currencyCode: rub.code
         }
     } as MonoPackageOffer,
     {
@@ -34,13 +34,13 @@ export const offers: Offer<Pack>[] = [
                 product: questCookiesAndCream,
                 quantity: {
                     value: 12,
-                    units: bars
+                    unitsCode: bars.code
                 }
             }
         },
         price: {
             value: 1500,
-            currency: rub
+            currencyCode: rub.code
         }
     } as MonoPackageOffer
 ]

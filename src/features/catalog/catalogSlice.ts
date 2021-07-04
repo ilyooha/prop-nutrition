@@ -6,10 +6,7 @@ import {Price} from "../prices/model";
 import {Pack} from "../packs/model";
 import {Offer} from "../offers/model";
 
-interface PriceState {
-    value: number;
-    currencyCode: string;
-}
+type PriceState = Price;
 
 interface OfferState {
     packageId: string;
@@ -53,7 +50,7 @@ const initialState: CatalogStore = {
 const getPriceState = (price: Price) => {
     const state: PriceState = {
         value: price.value,
-        currencyCode: price.currency.code
+        currencyCode: price.currencyCode
     };
     return state;
 }

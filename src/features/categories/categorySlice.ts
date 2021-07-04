@@ -51,7 +51,6 @@ export default categorySlice.reducer;
 export const getCategoryById = (id: string) => {
     return (rootState: RootState) => {
         const state = rootState.category;
-        console.log(state);
         const exists = state.byId.hasOwnProperty(id);
         if (!exists)
             throw new Error(`Category ${id} doesn't exist.`);

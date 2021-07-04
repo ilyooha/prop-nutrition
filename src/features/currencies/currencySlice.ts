@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {Currency} from "./model";
-import {rub} from "./currencies";
+import {rub} from "./data";
 import {RootState} from "../../app/store";
 
 const currenciesRegistry: { [key: string]: Currency } = {

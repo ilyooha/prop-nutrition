@@ -1,5 +1,5 @@
 import {bars} from "../units/units";
-import {rub} from "../currencies/currencies";
+import {rub} from "../currencies/data";
 import {questCookiesAndCream} from "../products/data";
 import {CatalogItem, SingleProductCatalogItem, singleProductCatalogItemType} from "./model";
 import {monoPack} from "../packs/model";
@@ -19,13 +19,13 @@ export const items: CatalogItem[] = [
                         product: questCookiesAndCream,
                         quantity: {
                             value: 1,
-                            units: bars
+                            unitsCode: bars.code
                         },
                     }
                 },
                 price: {
                     value: 200,
-                    currency: rub
+                    currencyCode: rub.code
                 }
             } as MonoPackageOffer,
             {
@@ -36,13 +36,13 @@ export const items: CatalogItem[] = [
                         product: questCookiesAndCream,
                         quantity: {
                             value: 12,
-                            units: bars
+                            unitsCode: bars.code
                         }
                     }
                 },
                 price: {
                     value: 1500,
-                    currency: rub
+                    currencyCode: rub.code
                 }
             } as MonoPackageOffer
         ],

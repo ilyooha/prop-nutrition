@@ -1,14 +1,10 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {MonoPack, MultiPack, Pack, PackItem, PackType} from "./model";
 import {RootState} from "../../app/store";
-import {getUnitsByCode} from "../units/unitsSlice";
 import {getProductById} from "../products/productSlice";
 import {Quantity} from "../quantity/model";
 
-interface QuantityState {
-    value: number;
-    unitsCode: string;
-}
+type QuantityState = Quantity;
 
 interface PackItemState {
     productId: string;
@@ -42,7 +38,7 @@ const initialState: PackStore = {
 const getQuantityState = (q: Quantity) => {
     return {
         value: q.value,
-        unitsCode: q.units.code
+        unitsCode: q.unitsCode
     } as QuantityState;
 }
 
@@ -80,14 +76,10 @@ const getPackState = (pack: Pack) => {
 
 const getPackItem = (state: PackItemState) => {
     return (rootState: RootState) => {
-        const units = getUnitsByCode(state.quantity.unitsCode)(rootState);
         const product = getProductById(state.productId)(rootState);
         return {
             product: product,
-            quantity: {
-                value: state.quantity.value,
-                units: units
-            }
+            quantity: state.quantity
         } as PackItem;
     }
 }

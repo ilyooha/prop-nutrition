@@ -4,12 +4,8 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {Price} from "../prices/model";
 import {RootState} from "../../app/store";
 import {getPackById} from "../packs/packSlice";
-import {getCurrencyByCode} from "../currencies/currencySlice";
 
-interface PriceState {
-    value: number;
-    currencyCode: string;
-}
+type PriceState = Price;
 
 interface OfferState {
     id: string;
@@ -28,7 +24,7 @@ const initialState: OfferStore = {
 const getPriceState = (price: Price) => {
     const state: PriceState = {
         value: price.value,
-        currencyCode: price.currency.code
+        currencyCode: price.currencyCode
     };
     return state;
 }
@@ -71,7 +67,7 @@ export const getOfferById = (id: string) => {
             package: pack,
             price: {
                 value: offerState.price.value,
-                currency: getCurrencyByCode(offerState.price.currencyCode)(rootState)
+                currencyCode: offerState.price.currencyCode
             }
         };
 

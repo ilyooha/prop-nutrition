@@ -1,20 +1,18 @@
-// моно-продукт
-//  выбор варианта (отличаются по количеству), каждый с ценой
-//      полная стоимость: ...
-//      цена за штуку, базовая: ... и считаем выгоду
-
-// мульти
-//      полная стоимость: ...
-//      стоимость по-отдельности: ... и считаем выгоду
-
-import {MonoPack, MultiPack, Pack} from "../packs/model";
 import {Price} from "../prices/model";
+import {Product} from "../products/model";
+import {Quantity} from "../quantity/model";
 
-export interface Offer<T extends Pack> {
+export interface Offer {
     id: string;
-    package: T;
+    title: string;
+    images: string[];
     price: Price;
+    validFrom: string;
+    validUntil: string;
+    content: OfferItem[];
 }
 
-export type MonoPackageOffer = Offer<MonoPack>;
-export type MultiPackageOffer = Offer<MultiPack>;
+export interface OfferItem {
+    product: Product;
+    quantity: Quantity;
+}

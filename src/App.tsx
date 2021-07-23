@@ -1,13 +1,14 @@
 import React from 'react';
-import './App.css';
-import {Offers} from "./features/offers/Offers";
+import './App.scss';
+import {OfferList} from "./features/offers/components/OfferList";
+import {offers} from "./features/offers/data";
 
 function App() {
-  return (
-    <div className="App">
-      <Offers />
-    </div>
-  );
+    return (
+        <div className="App">
+            <OfferList offers={offers}/>
+        </div>
+    );
 }
 
 export default App;

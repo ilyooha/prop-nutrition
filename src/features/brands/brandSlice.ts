@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {Brand} from "./model";
-import {quest} from "./brands";
+import {quest} from "./data";
 import {RootState} from "../../app/store";
 
 type BrandState = Brand;

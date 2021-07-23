@@ -1,0 +1,15 @@
+$marginX: 1rem;
+
+.offer-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+
+  .offer-list-item {
+    width: calc((100% - #{$marginX} * 2 * 3) / 3);
+    margin: 2rem $marginX;
+
+    display: flex;
+    align-items: stretch;
+  }
+}
